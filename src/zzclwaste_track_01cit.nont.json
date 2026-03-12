@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZZCLWASTE_TRACK_01CIT",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZZCLWASTE_TRACK_01CIT",
+  "sapObjectType": "ZZCLWASTE_TRACK_01CIT",
+  "rootNode": true
+}

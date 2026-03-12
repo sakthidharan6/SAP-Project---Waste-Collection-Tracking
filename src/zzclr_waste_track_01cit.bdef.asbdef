@@ -1,0 +1,55 @@
+managed implementation in class ZZCLBP_R_WASTE_TRACK_01CIT unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZZCLR_WASTE_TRACK_01CIT alias ZzclrWasteTrack01cit
+persistent table ZWASTE_TRACK_01
+extensible
+draft table ZZCLWSTE_TR_DCIT
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   WasteID;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   WasteID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZWASTE_TRACK_01 corresponding extensible
+  {
+    WasteID = WASTE_ID;
+    AreaName = AREA_NAME;
+    CollectorName = COLLECTOR_NAME;
+    VehicleNumber = VEHICLE_NUMBER;
+    WasteType = WASTE_TYPE;
+    CollectionDate = COLLECTION_DATE;
+    CollectionTime = COLLECTION_TIME;
+    Status = STATUS;
+    Remarks = REMARKS;
+    CreatedBy = CREATED_BY;
+    CreatedAt = CREATED_AT;
+    LastChangedBy = LAST_CHANGED_BY;
+    LastChangedAt = LAST_CHANGED_AT;
+    LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+  }
+
+}

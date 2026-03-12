@@ -1,0 +1,20 @@
+projection implementation in class ZZCLBP_C_WASTE_TRACK_01CIT unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for ZZCLC_WASTE_TRACK_01CIT alias ZzclcWasteTrack01cit
+extensible
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+}

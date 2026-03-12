@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZZCLC_WASTE_TRACK_01CIT'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZZCLC_WASTE_TRACK_01CIT'
+  }
+}
+define service ZZCLUI_WASTE_TRACK_01_O4CIT provider contracts odata_v4_ui {
+  expose ZZCLC_WASTE_TRACK_01CIT;
+}

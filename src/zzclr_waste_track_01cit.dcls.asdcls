@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZZCLR_WASTE_TRACK_01CIT'
+@MappingRole: true
+define role ZZCLR_WASTE_TRACK_01CIT {
+  grant select on ZZCLR_WASTE_TRACK_01CIT
+  where TRUE;
+}
